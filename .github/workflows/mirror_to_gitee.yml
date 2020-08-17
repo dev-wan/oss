@@ -29,6 +29,6 @@ jobs:
       # 向 gitee 提交图床仓库备份
       - name: Mirror To Gitee
         run: |
-          git remote add develop git@gitee.com:inaw/images.git
+          git remote add develop git@gitee.com:inaw/oss.git
           imgbot=`git rev-parse HEAD | git show -s --format='%ae' | grep imgbot` || echo "No Imgbot Pull Request"
           [[ ! -z "$imgbot" ]] && git push --set-upstream develop master -f || echo "Ingore Mirror To Gitee"
